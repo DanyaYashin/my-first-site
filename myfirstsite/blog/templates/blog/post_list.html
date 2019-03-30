@@ -3,12 +3,16 @@
 <title>best sinners' site </title>
 </head>
 <body>
-<p>pride</p>
-<p>greed</p>
-<p>lust</p>
-<p>envy</p>
-<p>gluttony</p>
-<p>wrath</p>
-<p>sloth</p>  
+<div>
+  {%for post in posts%}
+    <div>
+      <p>published: {{post.published_date}}</p>
+      <h2><a href="">{{post.title}}</a></h2>
+      <p>{{post.text|linebreaksbr}}</p>
+    </div>
+
+
+  {%endfor%}
+</div>
 </body>
 </html>
