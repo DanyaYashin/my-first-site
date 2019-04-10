@@ -1,0 +1,32 @@
+.page-header {
+  padding: 20px 20px 20px 20px;
+  margin: 30px;
+  background-color: #cfcfcf;
+  text-align: center;
+}
+
+.page-header h1 {color: black;}
+
+h1, h2, h3 {font-family: 'Cinzel', serif;}
+h4 {font-family: 'Cormorant Garamond', serif;}
+
+.post {
+  background-color: #000000;
+  padding: 30px;
+  margin: 10px;
+  margin-bottom: 50px;
+
+}
+
+.post h2 a {
+  color: red;
+}
+
+.text {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.date {
+  font-family: 'News Cycle', sans-serif;
+
+}
