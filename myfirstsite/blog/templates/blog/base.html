@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static '/css/blog.css' %}">
+<title>Best sinners' site </title>
+</head>
+<body style="background-color: black;">
+  <font color="white">
+  <div class="page-header">
+  <h1> Real sins </h1>
+  </div>
+<div>
+  {% block content %}
+  {% endblock %}
+</div>
+  </font>
+</body>
+</html>
