@@ -30,3 +30,9 @@ h4 {font-family: 'Cormorant Garamond', serif;}
   font-family: 'News Cycle', sans-serif;
 
 }
+
+.top-menu {
+  color: #ff0000;
+  float: right;
+  margin-right: 20px;
+}
