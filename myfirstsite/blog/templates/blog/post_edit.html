@@ -2,9 +2,11 @@
 
 {% block content%}
 <h2>New Sin</h2>
+<font color="black">
 <form class="post-form"  method="post">{% csrf_token %}
   {{ form.as_p }}
-  <button type="submit" class=" save btn btn-default">Save</button>
+  <button type="submit" class=" save btn btn-default" style="margin-left: 34px;">Confess</button>
+  </font>
 </form>
 
 {% endblock %}
