@@ -1,7 +1,10 @@
 {% extends 'blog/base.html' %}
 
 {% block content%}
+<div class="newsin">
 <h2>New Sin</h2>
+</div>
+
 <font color="black">
 <form class="post-form"  method="post">{% csrf_token %}
   {{ form.as_p }}

@@ -41,5 +41,9 @@ h4 {font-family: 'Cormorant Garamond', serif;}
 }
 
 .red{
-  color:#ff0000;
+  color: #ff0000;
+}
+
+.newsin h2{
+  margin-left: 34px;
 }
