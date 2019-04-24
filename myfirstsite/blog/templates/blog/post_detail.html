@@ -10,9 +10,11 @@
     <p><em>published: {{post.published_date}}</em></p>
   </div>
 </div>
+{% if user.is_authenticated %}
 <div class="plus">
 <a href="{% url 'post_edit' pk=post.pk %}" class="top-menu"> <span class="glyphicon glyphicon-pencil red"></span> </a>
 </div>
+{% endif %}
 
 
   {% endblock %}

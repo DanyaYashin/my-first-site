@@ -10,9 +10,11 @@
 <body style="background-color: black;">
   <font color="white">
   <div class="page-header">
+{% if user.is_authenticated %}
     <div class="plus">
       <a href="{% url 'post_new' %}" class="top-menu"> <span class="glyphicon glyphicon-apple red"></span> </a>
     </div>
+{% endif %}
   <h1><a href="/"> Real sins </a></h1>
   </div>
 <div>
