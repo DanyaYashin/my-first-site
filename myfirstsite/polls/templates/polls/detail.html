@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static '/css/polls.css' %}">
+<title>Sinner polls</title>
+</head>
+<body style="background-color: #72522a;">
+  <font color="white">
+    <div class="top-polls">
+      <h1> Make your choice </h1>
+    </div>
+<div class="poll">
+  <div class="title-polls">
+<h1>{{ question.question_text }}</h1>
+  </div>
+  <div class="choice">
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'polls:vote' question.id %}" method="post">
+  {% csrf_token %}
+  {% for choice in question.choice_set.all %}
+  <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{choice.id}}">
+  <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+  {% endfor%}
+    </div>
+  <div class="vote">
+  <input type="submit" value="Vote">
+  </div>
+</form>
+</div>
+</font>
+</body>
+</html>
