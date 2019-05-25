@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static '/css/polls.css' %}">
+  <title>Sinner polls</title>
+</head>
+
+<body style="background-color: #72522a;">
+
+<div class="results">
+
+<div class="results-top">
+<h1>{{ question.question_text }}</h1>
+</div>
+
+<ul class="polls">
+  {% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} &nbsp {{ choice.votes }} vote{{ choice.votes|pluralize }}
+    </li>
+    {% endfor %}
+</ul>
+<div class="results-bottom">
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+</div>
+
+</div>
+</body>
+</html>
