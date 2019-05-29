@@ -40,7 +40,7 @@ def post_list(request):
     if not request.GET.get('hash'):
         return render(request, 'blog/post_list.html', {'posts':posts,'user':None})
     try:
-        result = verify_telegram_authentication(
+        user = verify_telegram_authentication(
             bot_token=bot_token, request_data=request.GET
         )
 
