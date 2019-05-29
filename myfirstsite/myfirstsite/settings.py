@@ -38,8 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'polls.apps.PollsConfig'
+    'polls.apps.PollsConfig',
+    'django_telegram_login',
 ]
+
+TELEGRAM_BOT_NAME = 'SaintPeterDjangoLoginBot'
+TELEGRAM_BOT_TOKEN = '845193540:AAHonerwb5_5bMCcQf3hJnlZDeS8e8KebhI'
+TELEGRAM_LOGIN_REDIRECT_URL = 'http://rinsgray.pythonanywhere.com/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
