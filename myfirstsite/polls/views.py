@@ -58,7 +58,7 @@ def callback(request):
     telegram_login_widget = create_callback_login_widget(bot_name, size=SMALL)
 
     context = {'telegram_login_widget': telegram_login_widget}
-    return render(request, 'telegram_auth/callback.html', context)
+    return render(request, 'polls/callback.html', context)
 
 
 def redirect(request):
@@ -67,7 +67,7 @@ def redirect(request):
     )
 
     context = {'telegram_login_widget': telegram_login_widget}
-    return render(request, 'telegram_auth/redirect.html', context)
+    return render(request, 'polls/redirect.html', context)
 
 
 
