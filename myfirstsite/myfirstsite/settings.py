@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
 TELEGRAM_BOT_NAME = 'SaintPeterDjangoLoginBot'
 TELEGRAM_BOT_TOKEN = '845193540:AAHonerwb5_5bMCcQf3hJnlZDeS8e8KebhI'
-TELEGRAM_LOGIN_REDIRECT_URL = 'http://rinsgray.pythonanywhere.com/'
+TELEGRAM_LOGIN_REDIRECT_URL = 'http://danyasha.pythonanywhere.com/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
