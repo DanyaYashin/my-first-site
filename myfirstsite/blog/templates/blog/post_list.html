@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
-{% block content %}
 <div class="name_user">
+  {% block content %}
   {%if user%}
   {{user.first_name}}
   {%endif%}
