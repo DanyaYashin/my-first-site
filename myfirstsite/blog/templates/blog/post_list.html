@@ -1,6 +1,10 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-
+<div class="name_user">
+  {%if user%}
+  {{user.first_name}}
+  {%endif%}
+</div>
 
   {%for post in posts%}
     <div class="post">
