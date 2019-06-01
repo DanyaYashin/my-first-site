@@ -1,9 +1,12 @@
 .page-header {
   padding: 20px 20px 20px 20px;
   margin: 30px;
+  top: 0;
   background-color: #cfcfcf;
   text-align: center;
+  position: sticky;
 }
+
 
 .page-header h1, .page-header h1 a, .page-header a:visited {
   color: black;
@@ -14,7 +17,7 @@ h1, h2, h3 {font-family: 'Cinzel', serif;}
 h4 {font-family: 'Cormorant Garamond', serif;}
 
 .post {
-  background-color: #000000;
+  background: rgba(0,0,0,0.3);
   padding: 30px;
   margin: 10px;
   margin-bottom: 50px;
@@ -22,16 +25,18 @@ h4 {font-family: 'Cormorant Garamond', serif;}
 }
 
 .post h2 a {
+  opacity: 1;
   color: red;
 }
 
 .text {
+  opacity: 1;
   font-family: 'Cormorant Garamond', serif;
 }
 
 .date {
   font-family: 'News Cycle', sans-serif;
-
+  opacity: 1;
 }
 
 .plus {
@@ -51,6 +56,30 @@ h4 {font-family: 'Cormorant Garamond', serif;}
 .name_user{
   margin-left: 30px;
   padding-left: 30px;
-  background-color: red;
-  color: blue;
+  color: #6c4675;
+  text-align: center;
+}
+
+.parallax{
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base{
+  transform: translateZ(0);
+}
+
+.parallax__layer--back{
+
+  transform: translateZ(-5px) scale(10);
 }
