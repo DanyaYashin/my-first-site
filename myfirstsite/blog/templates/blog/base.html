@@ -17,8 +17,12 @@
 {% endif %}
   <h1><a href="/"> Real sins </a></h1>
   </div>
-<div>
+<div class="name_user">
+  Sinner 
   {% block content %}
+  {%if user%}
+  {{user.first_name}}
+  {%endif%}
   {% endblock %}
 </div>
   </font>
