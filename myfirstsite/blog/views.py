@@ -38,15 +38,15 @@ redirect_url = settings.TELEGRAM_LOGIN_REDIRECT_URL
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     if not request.GET.get('hash'):
-        return render(request, 'blog/post_list.html', {'posts':posts,'user':None})
+        return render(request, 'blog/post_list.html', {'posts':posts,'tel_user':None})
     try:
-        user = verify_telegram_authentication(
+        tel_user = verify_telegram_authentication(
             bot_token=bot_token, request_data=request.GET
         )
 
     except Exception:
-        user = None
-    return render(request, 'blog/post_list.html', {'posts':posts,'user':user})
+        tel_user = None
+    return render(request, 'blog/post_list.html', {'posts':posts,'tel_user':tel_user})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)

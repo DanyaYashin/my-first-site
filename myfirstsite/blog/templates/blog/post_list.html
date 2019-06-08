@@ -1,9 +1,10 @@
 {% extends 'blog/base.html' %}
+
   {% block content %}
-  {%if user%}
+  {%if tel_user%}
   <div class="name_user">
-    Sinner 
-  {{user.first_name}}
+    Sinner
+  {{tel_user.first_name}}
   </div>
   {%endif%}
 
