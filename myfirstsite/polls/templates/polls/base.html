@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static '/css/polls.css' %}">
+<title>Sinner polls</title>
+</head>
+<body style="background-color: #893929;">
+
+<div class="parallax">
+
+  <div class="parallax__layer parallax__layer--back">
+    <img src="/static/images/ad2.jpg" alt="Hell" width="100%">
+  </div>
+
+<div class="parallax__layer parallax__layer--base">
+  {% block content %}
+  {% endblock %}
+</div>
+
+</div>
+
+</body>
+</html>

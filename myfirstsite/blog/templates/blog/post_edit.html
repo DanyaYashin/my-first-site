@@ -6,7 +6,7 @@
 </div>
 
 <font color="black">
-<form class="post-form"  method="post">{% csrf_token %}
+<form class="post-form"  method="post" enctype="multipart/form-data">{% csrf_token %}
   {{ form.as_p }}
   <button type="submit" class=" save btn btn-default" style="margin-left: 34px;">Confess</button>
   </font>

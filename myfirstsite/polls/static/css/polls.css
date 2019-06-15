@@ -1,12 +1,17 @@
 .poll{
   font-family: 'Libre', serif;
-  color: #893c37;
+  color: #a88050;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #a88050;
+  background-color: #893929;
   margin-left: 40%;
   margin-right: 40%;
   margin-top: 100px;
+  background: rgba(0,0,0,0.5);
+}
+
+.polls a {
+  color: #0451ce;
 }
 
 .page-header{
@@ -14,16 +19,17 @@
   text-align: center;
   font-family: 'Cinzel', sans-serif;
   padding-bottom: -10px;
-  border: 0px solid #a88050;
+  border: 0px solid #893929;
 }
 
 .polls{
-  margin-left: 20%;
-  padding: 75px;
+
+  padding-left: 20%;
   line-height: 20mm;
   font-size: x-large;
-  color: #893c37;
+  color: #afa6a5;
   font-family: 'Cinzel', sans-serif;
+  background: rgba(0,0,0,0.5);
 }
 
 .title-polls{
@@ -33,7 +39,7 @@
 
 .vote{
   text-align: center;
-  color: #893c37;
+  color: #a88050;
 }
 
 .choice{
@@ -50,10 +56,11 @@
 
 .results{
   font-family: 'Libre', serif;
-  background-color: #a88050;
+  background-color: #893929;
   margin-left: 30%;
   margin-right: 30%;
   margin-top: 100px;
+  background: rgba(0,0,0,0.5);
 }
 
 .results-top{
@@ -70,5 +77,32 @@
 }
 
 .results-bottom a{
-   color: #893c37;
+   color: #a88050;
+}
+
+.parallax{
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base{
+  transform: translateZ(0);
+}
+
+.parallax__layer--back{
+  transform: translateZ(-5px) scale(10);
+}
+
+h1{
+  color: #afa6a5;
 }
